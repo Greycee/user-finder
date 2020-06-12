@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- prettier-ignore -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Random User Search</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">User finder</h1>
+    <div>
+    <p1>Search:</p1>
+    <div style="display: flex; width: 80%; margin: auto">
+      <input
+        type="text"
+        id="filter"
+        style="margin-right: 30px;"
+        onkeyup="filterUsers()"
+      />
+    </div>
+    <div style="display: flex; justify-content: space-around;">
+      <div class="frame">
+        <h2 id="usersTitle"></h2>
+        <div id="usersDiv"></div>
+      </div>
+      <div class="frame" style="height: 50%">
+        <h2 id="statisticsTitle"></h2>
+        <p class="statsItem">Total Male: <span id="totalMale"></span></p>
+        <p class="statsItem">Total Female: <span id="totalFemale"></span></p>
+        <p class="statsItem">Sum of ages: <span id="sumAges"></span></p>
+        <p class="statsItem">Average age: <span id="averageAge"></span></p>
+      </div>
+    </div>
+    <script defer src="script.js"></script>
+  </body>
+</html>
